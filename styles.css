@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe6f0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.card-container {
+    text-align: center;
+    background: #fff;
+    border-radius: 15px;
+    padding: 40px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.heart-container {
+    position: relative;
+    animation: floatHeart 3s ease-in-out infinite;
+    font-size: 50px;
+    color: #ff007f;
+    margin-bottom: 20px;
+}
+
+.heart {
+    animation: heartBeat 1s infinite;
+}
+
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.message-container {
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ff007f;
+}
+
+.message {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+.surprise-btn {
+    background-color: #ff007f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.surprise-btn:hover {
+    background-color: #d1006a;
+    transition: background-color 0.3s;
+}
+
+.surprise-message {
+    font-size: 1.1rem;
+    color: #ff007f;
+    margin-top: 20px;
+    font-weight: bold;
+    display: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.image-gallery img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+@keyframes floatHeart {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .message {
+        font-size: 1rem;
+    }
+}
